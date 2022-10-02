@@ -2,6 +2,13 @@
 
 This project emphasises on introductory object oriented concepts.
 
+Topics learnt in the process:    
+- C++ Constructors and Destructors.    
+- Character array vs Strings in C++.    
+- Windows scripting (file management).    
+
+
+
 The Bank Management has two types of users:
 - Customer
 - Employee
