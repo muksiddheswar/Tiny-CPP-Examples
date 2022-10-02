@@ -1,4 +1,4 @@
-This is a simple project that uses fstream module.
+This is a simple project that uses fstream module.    
 
 1. Register function creates a flat file with the password written in plain text.
 2. Login matches the enetered string with a file named the same as the username.
