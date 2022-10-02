@@ -1,4 +1,5 @@
 # include <iostream>
+# include <conio.h>
 #include <fstream>
 using namespace std;
 
@@ -12,11 +13,14 @@ int RegisterUser(){
 
     // Create and open a text file
     ofstream MyFile(name+".txt");
+
     // Write to the file
     MyFile << password;
 
     // Close the file
     MyFile.close();
+
+    cout<<"User registered.";
 
 }
 
@@ -30,9 +34,10 @@ int LoginUser(){
 
     ifstream MyFile(name+".txt");
 
+    // Read from file.
     getline (MyFile, MyText);
 
-    if (MyText == MyText)
+    if (MyText == password)
         return true;
     else
         return false;
@@ -41,6 +46,13 @@ int LoginUser(){
     MyFile.close();
 
 }
+
+void PressAKeyToContinue(){
+  int c;
+  printf( "\nPress a key to continue..." );
+  c = getch();
+  if (c == 0 || c == 224) getch();
+  }
 
 int main(){
     int response;
@@ -66,8 +78,7 @@ int main(){
         cout<<"Not a valid input. Exiting...";
         break;
     }
-
-
-
+    PressAKeyToContinue();
+    
     return 0;
 }
