@@ -33,6 +33,7 @@ int main()
 		cout << *ir << " ";
 
 	*g1.rbegin() = 21;
+	// *g1.crbegin() = 21; // Compiler error. Nt posssible because a constant pointer is returned.
 	cout << "\nOutput of begin and end: ";
 	for (auto i = g1.begin(); i != g1.end(); ++i)
 		cout << *i << " ";
@@ -40,9 +41,6 @@ int main()
 	g1.rbegin() = g2.rbegin();
 	cout << "\n\nHere: "<<*g1.rbegin();
 	cout << "\nHere: "<<*g2.rbegin();
-
-	// *g1.crbegin() = 21; // Compiler error. Nt posssible because a constant pointer is returned.
-
 
 	return 0;
 }
