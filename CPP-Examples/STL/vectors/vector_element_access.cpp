@@ -27,7 +27,7 @@ int main()
 
     cout << "\nThe third element is " << g1[2];
 
-    cout << endl << pos;
+    cout << endl << g1.data();
     cout << endl << &g1.front();
 
 	return 0;
