@@ -9,6 +9,13 @@ int main()
 {
 	vector<int> g1;
 
+	cout << "Size : " << g1.size();
+	cout << "\nCapacity : " << g1.capacity()<<endl;
+
+	g1.reserve(10);
+	cout << "Size : " << g1.size();
+	cout << "\nCapacity : " << g1.capacity()<<endl;
+
 	for (int i = 1; i <= 5; i++)
 		g1.push_back(i);
 
@@ -25,6 +32,7 @@ int main()
 
 	// prints the vector size after resize()
 	cout << "\nSize : " << g1.size();
+	cout << "\nCapacity : " << g1.capacity();
 
 	// checks if the vector is empty or not
 	if (g1.empty() == false)
