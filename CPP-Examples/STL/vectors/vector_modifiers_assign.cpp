@@ -11,6 +11,7 @@ int main()
 
 	cout << "Size of first: "
 	<< int(v.size()) << '\n';
+	cout << int(v.capacity()) << '\n';
 
 	cout << "Elements are\n";
 	for (int i = 0; i < v.size(); i++)
@@ -19,6 +20,15 @@ int main()
     v.assign(5, 111);
 
     cout << "\nElements are\n";
+	for (int i = 0; i < v.size(); i++)
+		cout << v[i] << endl;
+    cout << "Size of second: "
+	<< int(v.size()) << '\n';
+    cout << int(v.capacity()) << '\n';
+
+
+	v.clear();
+	cout << "\nElements are\n";
 	for (int i = 0; i < v.size(); i++)
 		cout << v[i] << endl;
     cout << "Size of second: "
