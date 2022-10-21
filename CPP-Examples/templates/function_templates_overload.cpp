@@ -33,6 +33,10 @@ class Box {
                 return true;
             return false;
         }
+
+         std::ostream& operator<< (const Box& box) {
+
+        }
         
     private:
         double length;        // Length of a box
