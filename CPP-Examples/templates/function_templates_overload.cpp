@@ -34,7 +34,8 @@ class Box {
             return false;
         }
 
-         std::ostream& operator<< (const Box& box) {
+         std::ostream& operator<< (ostream &out, const Box& box) {
+            
 
         }
         
