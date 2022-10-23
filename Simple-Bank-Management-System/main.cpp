@@ -8,8 +8,8 @@ using namespace std;
 int main()
 {
 
-  myClass m;
-  cout << m.getNumber() <<endl;
-  m.func();
+  Customer m;
+  m.info_in();
+  m.info_out();
   return 0;
 }
