@@ -3,7 +3,7 @@
 This project emphasises on introductory object oriented concepts.
 
 Topics learnt in the process:    
-- C++ Constructors and Destructors.    
+- Constructors and Destructors.    
 - Templates.
 - Character array vs Strings in C++.
 - Overloading (Functions, Operators).    
