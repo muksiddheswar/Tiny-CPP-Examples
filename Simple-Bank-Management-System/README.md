@@ -6,8 +6,9 @@ Topics learnt in the process:
 - C++ Constructors and Destructors.    
 - Character array vs Strings in C++.
 - Overloading (Functions, Operators).    
+- C++ compilation process.
 - Windows scripting (file management).    
-
+- Bash: `ls`, `find`
 
 
 The Bank Management has two types of users:
