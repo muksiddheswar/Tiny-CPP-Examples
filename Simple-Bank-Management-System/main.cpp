@@ -1,6 +1,6 @@
 #include <iostream>
 // #include "secondFile.h"
-#include "customer.h"
+#include "user.h"
 
 
 using namespace std;
@@ -8,8 +8,7 @@ using namespace std;
 int main()
 {
 
-  Customer m;
-  m.info_in();
-  m.info_out();
+  User m;
+  m.login();
   return 0;
 }

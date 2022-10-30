@@ -1,12 +1,14 @@
 #include <vector>
 #include <string>
 using namespace std;
-#pragma once
+// #pragma once
 
 class User 
 {
    public:
-      void func();
+      void login();
+      void open_account();
+      void available_options();
 
    private:
         int user_id;

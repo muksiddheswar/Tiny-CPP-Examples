@@ -2,7 +2,7 @@
 #include "user.h"
 
 using namespace std;
-#pragma once
+// #pragma once
 
 class Account 
 {
