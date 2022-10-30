@@ -9,7 +9,7 @@ Topics learnt in the process:
 - Overloading (Functions, Operators).    
 - C++ compilation process, multi-file projects.
 - Windows scripting (file management).    
-- Bash: `ls`, `find`
+- Bash: `ls`, `find`.
 
 
 The Bank Management has two types of users:
