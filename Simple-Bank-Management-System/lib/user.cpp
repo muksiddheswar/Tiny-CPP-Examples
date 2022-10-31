@@ -1,5 +1,5 @@
 #include <iostream>
-#include "user.h"
+#include "../include/user.h"
 using namespace std;
 // #pragma once
 
@@ -9,7 +9,7 @@ void User::login()
     string password;
     cout << "User Name: ";
     cin >> user_name;
-    cout << "User Name: ";
+    cout << "User Password: ";
     cin >> password;
 }
 
