@@ -8,8 +8,9 @@ void User::login()
     string user_name;
     string password;
     cout << "User Name: ";
-    cin >> user_name;
+    getline(cin, user_name);
     cout << "User Password: ";
     cin >> password;
+    getline(cin, password);
 }
 
