@@ -6,6 +6,7 @@ Topics learnt in the process:
 - Constructors and Destructors.    
 - Templates.
 - Character array vs Strings in C++.
+- Namespace.
 - Overloading (Functions, Operators).    
 - C++ compilation process, multi-file projects.
 - Windows scripting (file management).    
