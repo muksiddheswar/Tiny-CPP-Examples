@@ -51,7 +51,7 @@ The default options are:
 
 A first time customer can start with opening an account.
 
-A logged in customer gets the following finctionalities:
+A logged in customer gets the following functionalities:
 - Open an account
 - Show account details
 - Deposit
