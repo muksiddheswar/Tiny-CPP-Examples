@@ -7,6 +7,7 @@ Topics learnt in the process:
 - Templates.
 - Character array vs Strings in C++.
 - Namespace.
+- Global Variables.
 - Overloading (Functions, Operators).    
 - C++ compilation process, multi-file projects.
 - Windows scripting (file management).    
