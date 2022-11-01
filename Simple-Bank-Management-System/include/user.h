@@ -1,7 +1,7 @@
 #include <vector>
 #include <string>
 using namespace std;
-// #pragma once
+#pragma once
 
 class User 
 {
