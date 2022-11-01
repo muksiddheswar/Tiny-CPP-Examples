@@ -1,14 +1,12 @@
 #include <iostream>
-// #include "secondFile.h"
-#include "include/user.h"
-
+#include "tests/test_bank.cpp"
+#include "tests/test_user.cpp"
 
 using namespace std;
 
 int main()
 {
-
-  User m;
-  m.login();
-  return 0;
+  test_bank();
+  test_user();
+  getchar();
 }
