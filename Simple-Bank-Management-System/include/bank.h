@@ -9,6 +9,7 @@ class Bank
 {
    public:
         Bank(string bank_name);
+        void bank_main();
 
     private:
         string bank_name;
