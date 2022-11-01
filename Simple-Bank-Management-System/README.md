@@ -27,7 +27,6 @@ An user has the following information:
 An Account has the following information:
 - UserId 
 - User Name
-- Address
 - Account Number [`key`]
 - Balance
 
