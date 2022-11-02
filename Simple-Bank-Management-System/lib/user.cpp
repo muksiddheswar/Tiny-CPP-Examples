@@ -3,20 +3,18 @@
 #include "../include/account.h"
 using namespace std;
 
-// #pragma once
 
-void User::login()
+User::User(string user_name, string address, string password)
 {
-    string user_name;
-    string password;
-    vector<Account> all_accounts;
+    this ->name = user_name;
+    this ->address.push_back(address);
+    this ->password = password;
+}
 
-    cout << "User Name: ";
-    getline(cin, user_name);
-    cout << "User Password: ";
-    cin >> password;
-    getline(cin, password);
-
-    // all_accounts = locate_all_accounts();
+void User::get_user_information()
+{
+    cout << name << endl;
+    for (auto i = address.begin(); i != address.end(); ++i)
+        cout << *i << endl;
 }
 

@@ -6,8 +6,8 @@ using namespace std;
 class User 
 {
    public:
-      void login();
-      void open_account();
+      User(string user_name, string address, string password);
+      void get_user_information();
       void available_options();
 
    private:
