@@ -6,7 +6,7 @@ using namespace std;
 class User 
 {
    public:
-      User(string user_name, string address, string password);
+      User(string user_name, string address, string password, string type);
       void get_user_information();
       void available_options();
 
@@ -15,4 +15,5 @@ class User
         string name;
         vector<string> address;
         string password;
+        string type;
 };

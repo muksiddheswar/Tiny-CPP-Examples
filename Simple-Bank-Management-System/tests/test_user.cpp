@@ -5,8 +5,7 @@ using namespace std;
 
 int test_user()
 {
-  cout << endl;
-  User m;
-  m.login();
+  User m("root", "HQ", "root", "Employee");
+  m.get_user_information();
   return 0;
 }
