@@ -3,8 +3,7 @@
 This project emphasises on introductory object oriented concepts.
 
 Topics learnt in the process:    
-- Constructors and Destructors.    
-- Templates.
+- Inheritence, Constructors and Destructors.    
 - Character array vs Strings in C++.
 - Namespace.
 - Global Variables.
