@@ -1,11 +1,10 @@
 # include "user.h"
 using namespace std;
-// #pragma once
+#pragma once
 
-class Customer 
+class Customer: public User
 {
    public:
-      void func();
-   private:
-      User customer;
+      Customer(string user_name, string address, string password): User(user_name, address, password, "Customer") {};
+
 };
