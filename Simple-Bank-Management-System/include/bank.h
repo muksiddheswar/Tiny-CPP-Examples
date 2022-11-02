@@ -10,6 +10,9 @@ class Bank
    public:
         Bank(string bank_name);
         void bank_main();
+        int customer_login();
+        Employee employee_login();
+        void get_credentails(string* user_name, string* password);
 
     private:
         string bank_name;
