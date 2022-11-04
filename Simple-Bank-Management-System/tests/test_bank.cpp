@@ -7,5 +7,6 @@ int test_bank()
 {
     Bank m = Bank("Bank of Belgium");
     m.bank_main();
+    getchar();
     return 0;
 }
