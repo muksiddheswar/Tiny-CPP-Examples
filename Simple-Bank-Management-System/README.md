@@ -6,7 +6,8 @@ Topics learnt in the process:
 - Inheritence, Constructors and Destructors.    
 - Character array vs Strings in C++.
 - Namespace.
-- Optional
+- Optional.
+- Unordered Map.
 - ~~Global Variables~~ (Not required anymore).
 - Overloading (Functions, Operators).    
 - Tuple ~~Pass by reference~~ (Pass by value preferred over Pass by Refernce). 
