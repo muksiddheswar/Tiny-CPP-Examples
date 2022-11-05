@@ -1,3 +1,4 @@
+#include <tuple>
 #include <iostream>
 #include "../include/customer.h"
 #include "../include/employee.h"
@@ -11,7 +12,7 @@ Bank::Bank(string bank_name)
     cout << bank_name + " initialised. \n";
     this->all_employees.push_back(Employee(100001, "root", "HQ", "root"));
 
-    cout << "Here:" << this->all_employees.size();
+    cout << "Here:" << this->all_employees.size() << endl;
 }
 
 void Bank::bank_main()
@@ -33,8 +34,8 @@ void Bank::bank_main()
         {
             if (all_customers.empty())
                 cout << "No cutomer accounts exist. \n";
-            // else
-                // Bank::customer_login();
+            else
+                Bank::customer_login();
         }
 
         if (user_input_n == 2)
@@ -42,8 +43,8 @@ void Bank::bank_main()
             if (all_employees.empty())
                 cout << "No employee accounts exist. \n";
             else
-                cout << "Employee accounts exist!!!! \n";
-                // Bank::employee_login();
+                // cout << "Employee accounts exist!!!! \n";
+                Bank::employee_login();
         }
     }
 
@@ -58,18 +59,32 @@ void Bank::bank_main()
     bank_main();
 }
 
-int Bank::customer_login()
+experimental::optional<Customer> Bank::customer_login()
 {
+    int user_id;
+    string password;
+    tie(user_id, password) = Bank::get_credentails();
+    cout << user_id << password;
 
 }
 
-void Bank::get_credentails(string* user_name, string* password)
+experimental::optional<Employee> Bank::employee_login()
 {
-    cout << "User Name: ";
-    getline(cin, *user_name);
-    cout << "User Password: ";
-    cin >> *password;
+    int user_id;
+    string password;
+    tie(user_id, password) = Bank::get_credentails();
+    cout << user_id << password;
+    return {};
+}
 
-    // all_accounts = locate_all_accounts();
+tuple<int, string> Bank::get_credentails()
+{
+    int user_id;
+    string password;
+    cout << "User Id: ";
+    cin >> user_id;
+    cout << "User Password: ";
+    cin >> password;
+    return make_tuple(user_id, password);
 }
 

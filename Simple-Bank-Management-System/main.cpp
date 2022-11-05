@@ -9,7 +9,7 @@ using namespace std;
 int main()
 {
   test_bank();
-  test_user();
+  // test_user();
   // test_employee();
   // test_customer();
   getchar();
