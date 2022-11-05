@@ -8,7 +8,7 @@ Topics learnt in the process:
 - Namespace.
 - Global Variables.
 - Overloading (Functions, Operators).    
-- Pass by reference.
+- Tuple ~~Pass by reference~~ . 
 - C++ compilation process, multi-file projects.
 - Windows scripting (file management).    
 - Bash: `ls`, `find`.
