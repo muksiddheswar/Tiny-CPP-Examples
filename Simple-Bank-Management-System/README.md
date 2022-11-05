@@ -6,9 +6,9 @@ Topics learnt in the process:
 - Inheritence, Constructors and Destructors.    
 - Character array vs Strings in C++.
 - Namespace.
-- Global Variables.
+- ~~Global Variables~~ (Not required anymore).
 - Overloading (Functions, Operators).    
-- Tuple ~~Pass by reference~~ . 
+- Tuple ~~Pass by reference~~ (Pass by value over Pass by Refernce). 
 - C++ compilation process, multi-file projects.
 - Windows scripting (file management).    
 - Bash: `ls`, `find`.
