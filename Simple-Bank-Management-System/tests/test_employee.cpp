@@ -5,7 +5,7 @@ using namespace std;
 
 int test_employee()
 {
-  Employee m("root", "HQ", "root");
+  Employee m(100001, "root", "HQ", "root");
   m.get_user_information();
   return 0;
 }

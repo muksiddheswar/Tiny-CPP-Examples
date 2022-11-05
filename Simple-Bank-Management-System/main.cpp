@@ -8,9 +8,9 @@ using namespace std;
 
 int main()
 {
-  // test_bank();
-  // test_user();
+  test_bank();
+  test_user();
   // test_employee();
-  test_customer();
+  // test_customer();
   getchar();
 }

@@ -8,8 +8,10 @@ using namespace std;
 Bank::Bank(string bank_name)
 {
     this->bank_name = bank_name;
-    cout << bank_name + " initialised.";
-    this->all_employees.push_back(Employee("root", "HQ", "root"));
+    cout << bank_name + " initialised. \n";
+    this->all_employees.push_back(Employee(100001, "root", "HQ", "root"));
+
+    cout << "Here:" << this->all_employees.size();
 }
 
 void Bank::bank_main()
@@ -39,7 +41,8 @@ void Bank::bank_main()
         {
             if (all_employees.empty())
                 cout << "No employee accounts exist. \n";
-            // else
+            else
+                cout << "Employee accounts exist!!!! \n";
                 // Bank::employee_login();
         }
     }
@@ -62,7 +65,6 @@ int Bank::customer_login()
 
 void Bank::get_credentails(string* user_name, string* password)
 {
-
     cout << "User Name: ";
     getline(cin, *user_name);
     cout << "User Password: ";
@@ -70,3 +72,4 @@ void Bank::get_credentails(string* user_name, string* password)
 
     // all_accounts = locate_all_accounts();
 }
+

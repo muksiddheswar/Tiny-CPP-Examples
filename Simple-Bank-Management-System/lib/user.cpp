@@ -4,8 +4,9 @@
 using namespace std;
 
 
-User::User(string user_name, string address, string password, string type)
+User::User(int user_id, string user_name, string address, string password, string type)
 {
+    this -> user_id = user_id;
     this ->name = user_name;
     this ->address.push_back(address);
     this ->password = password;
@@ -14,6 +15,7 @@ User::User(string user_name, string address, string password, string type)
 
 void User::get_user_information()
 {
+    cout << user_id << endl;
     cout << name << endl;
     cout << type << endl;
     for (auto i = address.begin(); i != address.end(); ++i)

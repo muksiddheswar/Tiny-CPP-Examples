@@ -5,6 +5,6 @@ using namespace std;
 class Employee: public User
 {
    public:
-      Employee(string user_name, string address, string password): User(user_name, address, password, "Employee") {};
+      Employee(int user_id, string user_name, string address, string password): User(user_id, user_name, address, password, "Employee") {};
 
 };
