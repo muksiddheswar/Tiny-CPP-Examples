@@ -9,7 +9,7 @@ Topics learnt in the process:
 - Optional
 - ~~Global Variables~~ (Not required anymore).
 - Overloading (Functions, Operators).    
-- Tuple ~~Pass by reference~~ (Pass by value over Pass by Refernce). 
+- Tuple ~~Pass by reference~~ (Pass by value preferred over Pass by Refernce). 
 - Static, Non-Static member functions.
 - C++ compilation process, multi-file projects.
 - Windows scripting (file management).    
