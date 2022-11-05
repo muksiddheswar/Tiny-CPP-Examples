@@ -5,6 +5,7 @@ using namespace std;
 class Employee: public User
 {
    public:
-      Employee(int user_id, string user_name, string address, string password): User(user_id, user_name, address, password, "Employee") {};
+      Employee(): User() {};
+      explicit Employee(int user_id, string user_name, string address, string password): User(user_id, user_name, address, password, "Employee") {};
 
 };

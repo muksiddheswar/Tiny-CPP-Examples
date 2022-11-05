@@ -3,7 +3,6 @@
 #include "../include/account.h"
 using namespace std;
 
-
 User::User(int user_id, string user_name, string address, string password, string type)
 {
     this -> user_id = user_id;

@@ -10,7 +10,8 @@ Bank::Bank(string bank_name)
 {
     this->bank_name = bank_name;
     cout << bank_name + " initialised. \n";
-    this->all_employees.push_back(Employee(100001, "root", "HQ", "root"));
+    Employee root_employee = Employee(100001, "root", "HQ", "root");
+    this->all_employees[100001] = root_employee;
 
     cout << "Here:" << this->all_employees.size() << endl;
 }
@@ -65,6 +66,7 @@ experimental::optional<Customer> Bank::customer_login()
     string password;
     tie(user_id, password) = Bank::get_credentails();
     cout << user_id << password;
+    return {};
 
 }
 
@@ -88,3 +90,18 @@ tuple<int, string> Bank::get_credentails()
     return make_tuple(user_id, password);
 }
 
+
+
+tuple<string, string, string> Bank::get_user_details()
+{
+    string user_name;
+    string address;
+    string password;
+    cout << "User Id: ";
+    cin >> user_name;
+    cout << "User Address: ";
+    cin >> address;
+    cout << "User Password: ";
+    cin >> password;
+    return make_tuple(user_name, address, password);
+}
