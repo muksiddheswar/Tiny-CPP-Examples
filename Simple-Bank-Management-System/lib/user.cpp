@@ -14,7 +14,7 @@ User::User(int user_id, string user_name, string address, string password, strin
 
 void User::get_user_information()
 {
-    cout << user_id << endl;
+    cout << endl << user_id << endl;
     cout << name << endl;
     cout << type << endl;
     for (auto i = address.begin(); i != address.end(); ++i)

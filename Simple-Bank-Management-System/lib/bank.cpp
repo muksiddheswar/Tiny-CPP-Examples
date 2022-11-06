@@ -25,7 +25,7 @@ void Bank::bank_main()
 
     if (user_input == 1)
     {
-        cout << "Login: \n";
+        cout << "\nLogin: \n";
         cout << "1. Customer. \n";
         cout << "2. Employee. \n";
         cin >> user_input_n;
@@ -46,7 +46,7 @@ void Bank::bank_main()
                 auto my_employee = Bank::employee_login();
                 if (my_employee)
                 {
-                    cout << "Found!<< endl";
+                    cout << "Found!"<< endl;
                 }
             }
         }
@@ -60,6 +60,7 @@ void Bank::bank_main()
     else if (user_input == 3)
         return;
     
+    cout << "\n";
     bank_main();
 }
 
@@ -98,9 +99,8 @@ tuple<int, string> Bank::get_credentails()
 {
     int user_id;
     string password;
-    cout << "User Id: ";
+    cout << "\nUser Id: ";
     cin >> user_id;
-    cin.clear();
 
     cout << "User Password: ";
     cin >> password;
