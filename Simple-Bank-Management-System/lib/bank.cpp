@@ -69,17 +69,29 @@ experimental::optional<Customer> Bank::customer_login()
     int user_id;
     string password;
     tie(user_id, password) = Bank::get_credentails();
-    cout << user_id << password;
-    return {};
 
+    std::unordered_map<int, Customer>::const_iterator got = all_customers.find (user_id);
+    if ( got != all_customers.end() )
+    {
+        Customer e = got->second;
+        if (e.verify_password(password))
+        {
+            e.get_user_information();
+            return e;
+        }
+    }
+    
+    cout << "User " + to_string(user_id) + " not found or password incorrect!"<< endl;
+    return {};
 }
+
 
 experimental::optional<Employee> Bank::employee_login()
 {
     int user_id;
     string password;
     tie(user_id, password) = Bank::get_credentails();
-    // cout << user_id << password;
+
     std::unordered_map<int, Employee>::const_iterator got = all_employees.find (user_id);
     if ( got != all_employees.end() )
     {

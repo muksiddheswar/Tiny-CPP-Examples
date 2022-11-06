@@ -21,7 +21,8 @@ class Bank
     private:
         string bank_name;
         vector<Account> all_accounts;
-        vector<Customer> all_customers;
+        // vector<Customer> all_customers;
+        unordered_map<int, Customer> all_customers;
         // vector<Employee> all_employees;
         unordered_map<int, Employee> all_employees;
 
