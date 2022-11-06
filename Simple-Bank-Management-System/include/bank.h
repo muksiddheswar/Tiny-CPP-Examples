@@ -17,13 +17,14 @@ class Bank
         tuple<int, string> get_credentails();
         tuple<string, string, string> get_user_details();
         void create_user();
+        int open_account(experimental::optional<Customer> logged_in_customer);
+        int login_choice();
+        template <typename T> experimental::optional<T> find_user(unordered_map<int, T> x, string user_type);
 
     private:
         string bank_name;
         vector<Account> all_accounts;
-        // vector<Customer> all_customers;
         unordered_map<int, Customer> all_customers;
-        // vector<Employee> all_employees;
         unordered_map<int, Employee> all_employees;
 
 
