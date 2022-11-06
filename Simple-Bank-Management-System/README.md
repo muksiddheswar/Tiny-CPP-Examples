@@ -8,7 +8,7 @@ Topics learnt in the process:
 - Namespace.
 - Optional.
 - Unordered Map.
-- ~~Global Variables~~ (Not required anymore).
+- ~~Global Variables, Virtual Functions, Templates~~ (Not required anymore).
 - Overloading (Functions, Operators).    
 - Tuple ~~Pass by reference~~ (Pass by value preferred over Pass by Refernce). 
 - Static, Non-Static member functions.
