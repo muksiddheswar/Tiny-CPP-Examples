@@ -21,3 +21,11 @@ void User::get_user_information()
         cout << *i << endl;
 }
 
+int User::verify_password(string given_password)
+{
+    if (given_password == password)
+        return 1;
+
+    else
+        return 0;
+}
