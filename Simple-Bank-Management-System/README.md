@@ -8,9 +8,11 @@ Topics learnt in the process:
 - Namespace.
 - Optional.
 - Unordered Map.
-- ~~Global Variables, Virtual Functions, Templates~~ (Not required anymore).
+- ~~Global Variables, Virtual Functions~~ (Not required anymore).
+- Templates
 - Overloading (Functions, Operators).    
-- Tuple ~~Pass by reference~~ (Pass by value preferred over Pass by Refernce). 
+- Tuple.
+- Pass by reference.
 - Static, Non-Static member functions.
 - C++ compilation process, multi-file projects.
 - Windows scripting (file management).    
