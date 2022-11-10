@@ -67,20 +67,20 @@ void Bank::bank_main()
     bank_main();
 }
 
-int open_account(experimental::optional<Customer> logged_in_customer)
-{
-    Account new_account;
-    if (logged_in_customer)
-    {
+// int open_account(experimental::optional<Customer> logged_in_customer)
+// {
+//     Account new_account;
+//     if (logged_in_customer)
+//     {
 
-    }
+//     }
 
-    else
-    {
-        cout << "Login or create new user. \n";
-        return 0;
-    }
-}
+//     else
+//     {
+//         cout << "Login or create new user. \n";
+//         return 0;
+//     }
+// }
 
 int Bank::login_choice()
 {
