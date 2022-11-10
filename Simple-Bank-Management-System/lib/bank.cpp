@@ -10,8 +10,13 @@ Bank::Bank(string bank_name)
 {
     this->bank_name = bank_name;
     cout << bank_name + " initialised. \n";
-    Employee root_employee = Employee(100001, "root", "HQ", "root");
-    this->all_employees[100001] = root_employee;
+    last_employee_id = 1000000;
+    last_customer_id = 5000000;
+    last_account_number = 9000000;
+
+    int i = get_new_id(&last_employee_id);
+    Employee root_employee = Employee(i, "root", "HQ", "root");
+    this->all_employees[i] = root_employee;
 }
 
 void Bank::bank_main()
@@ -20,19 +25,21 @@ void Bank::bank_main()
     int user_input_n;
     cout<< "0: Exit. \n";
     cout<< "1: Login. \n" ;
-    cout<< "2: Create new user. \n" ;
-    cout<< "3: Open a bank account. \n" ;
+    cout<< "2: Create new customer. \n" ;
     cin >> user_input;
 
+    // Exit
     if (user_input == 0)
         return;
 
+    // Login
     if (user_input == 1)
     {
+        cout << "\nLogin: \n";
         user_input_n = login_choice() ;
         if (user_input_n == 1)
         {
-            auto my_customer = Bank::find_user(all_customers, "Customer");
+            auto my_customer = Bank::user_login(all_customers, "Customer");
             if (my_customer)
             {
                 cout << "Found!"<< endl;
@@ -41,23 +48,28 @@ void Bank::bank_main()
 
         if (user_input_n == 2)
         {
-            if (all_employees.empty())
-                cout << "No employee accounts exist. \n";
-            else
+            auto my_employee = Bank::user_login(all_employees, "Employee");
+            if (my_employee)
             {
-                auto my_employee = Bank::find_user(all_employees, "Employee");
-                if (my_employee)
-                {
-                    cout << "Found!"<< endl;
-                }
+                cout << "Found!"<< endl;
             }
         }
     }
 
+    // Create new customer.
     else if (user_input == 2)
     {
-        cout << "Open Account \n";
+        cout << "\nCreate New Customer \n";
+        create_customer();
+        cout <<"Size " << endl << all_customers.size();
     }
+
+    // else if (user_input == 3)
+    // {
+    //     cout << "\nOpen Account \n";
+    //     cout << "\nLogin: \n";
+    //     user_input_n = login_choice() ;
+    // }
     
     cout << "\n";
     bank_main();
@@ -88,11 +100,29 @@ int Bank::login_choice()
     return user_input_n;
 }
 
-template <typename T> experimental::optional<T> Bank::find_user(unordered_map<int, T> x, string user_type)
+int Bank::get_new_id(int* user_id_holder)
+{
+    *user_id_holder += 1;
+    return *user_id_holder;
+}
+
+
+void Bank::create_customer()
+{
+    string user_name;
+    string address;
+    string password;
+    int new_customer_id = get_new_id(&last_customer_id);
+    tie(user_name, address, password) = get_user_details();
+    Customer new_customer = Customer(new_customer_id, user_name, address, password);
+    all_customers[new_customer_id] = new_customer;
+}
+
+template <typename T> experimental::optional<T> Bank::user_login(unordered_map<int, T> user_map, string user_type)
 {
     int user_id;
     string password;
-    if(x.empty())
+    if(user_map.empty())
     {
         cout << "No " + user_type + " present in database.\n";
         return {};
@@ -102,8 +132,8 @@ template <typename T> experimental::optional<T> Bank::find_user(unordered_map<in
     else
     {
         tie(user_id, password) = Bank::get_credentails();
-        auto got = x.find(user_id);
-        if ( got != x.end() )
+        auto got = user_map.find(user_id);
+        if ( got != user_map.end() )
         {
             T e = got->second;
             if (e.verify_password(password))
@@ -117,26 +147,6 @@ template <typename T> experimental::optional<T> Bank::find_user(unordered_map<in
     return {};
 }
 
-experimental::optional<Customer> Bank::customer_login()
-{
-    int user_id;
-    string password;
-    tie(user_id, password) = Bank::get_credentails();
-
-    std::unordered_map<int, Customer>::const_iterator got = all_customers.find (user_id);
-    if ( got != all_customers.end() )
-    {
-        Customer e = got->second;
-        if (e.verify_password(password))
-        {
-            e.get_user_information();
-            return e;
-        }
-    }
-    
-    cout << "User " + to_string(user_id) + " not found or password incorrect!"<< endl;
-    return {};
-}
 
 tuple<int, string> Bank::get_credentails()
 {
@@ -153,10 +163,8 @@ tuple<int, string> Bank::get_credentails()
 
 tuple<string, string, string> Bank::get_user_details()
 {
-    string user_name;
-    string address;
-    string password;
-    cout << "User Id: ";
+    string user_name, address, password;
+    cout << "User Name: ";
     cin >> user_name;
     cout << "User Address: ";
     cin >> address;
