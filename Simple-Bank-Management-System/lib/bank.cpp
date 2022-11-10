@@ -61,15 +61,7 @@ void Bank::bank_main()
     {
         cout << "\nCreate New Customer \n";
         create_customer();
-        cout <<"Size " << endl << all_customers.size();
     }
-
-    // else if (user_input == 3)
-    // {
-    //     cout << "\nOpen Account \n";
-    //     cout << "\nLogin: \n";
-    //     user_input_n = login_choice() ;
-    // }
     
     cout << "\n";
     bank_main();
@@ -109,13 +101,13 @@ int Bank::get_new_id(int* user_id_holder)
 
 void Bank::create_customer()
 {
-    string user_name;
-    string address;
-    string password;
+    string user_name, address, password;
     int new_customer_id = get_new_id(&last_customer_id);
     tie(user_name, address, password) = get_user_details();
     Customer new_customer = Customer(new_customer_id, user_name, address, password);
     all_customers[new_customer_id] = new_customer;
+    cout << "Customer Created: " <<endl;
+    new_customer.get_user_information();
 }
 
 template <typename T> experimental::optional<T> Bank::user_login(unordered_map<int, T> user_map, string user_type)
