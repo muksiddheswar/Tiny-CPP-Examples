@@ -1,4 +1,3 @@
-#include "account.h"
 #include "customer.h"
 #include "employee.h"
 # include <experimental/optional>
@@ -24,7 +23,6 @@ class Bank
     private:
         string bank_name;
         int last_customer_id, last_employee_id, last_account_number;
-        vector<Account> all_accounts;
         unordered_map<int, Customer> all_customers;
         unordered_map<int, Employee> all_employees;
 

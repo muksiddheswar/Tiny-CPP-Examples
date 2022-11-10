@@ -1,6 +1,5 @@
 #include <iostream>
 #include "../include/user.h"
-#include "../include/account.h"
 using namespace std;
 
 User::User(int user_id, string user_name, string address, string password, string type)
