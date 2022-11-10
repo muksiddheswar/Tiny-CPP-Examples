@@ -8,7 +8,6 @@ Topics learnt in the process:
 - Namespace.
 - Optional.
 - Unordered Map.
-- ~~Global Variables, Virtual Functions~~ (Not required anymore).
 - Templates
 - Overloading (Functions, Operators).    
 - Tuple.
@@ -18,138 +17,47 @@ Topics learnt in the process:
 - Windows scripting (file management).    
 - Bash: `ls`, `find`.
 
+---
 
-The Bank Management has two types of users:
+The Bank Management has two types of users:     
 - Customer
 - Employee
 
-An user has the following information:
-- UserId [`key`]
-- User Name
-- Address
-- Password
-
-An Account has the following information:
-- UserId 
-- User Name
-- Account Number [`key`]
-- Balance
-
-### Common Operation:
-
-The default options are:
-
-- Login
-- Open an account
-
-#### Login
-- Input Username, Password
-- Error if user does not exist or password is wrong.
-- Show other options if successful.
-
-</br>
-
-## CUSTOMER:
-
-The default options are:
-- Login
-- Open an account
-
-A first time customer can start with opening an account.
-
-A logged in customer gets the following functionalities:
-- Open an account
-- Show account details
-- Deposit
-- Withdraw
-- Exit
-
-### Operation Details:
-
-#### Open an account
-- Input user name, address (If user is customer and logged in then do not ask for user name, address)
-- Input password (If user is logged in do not ask)
-- Create unique Account Number
-- Create unique User Id
-- Input initial amount
-- Save Account into database
-- Output Account Number, User Id
-
-#### Show Account Details:
-Output the following from the database
-- UserId 
-- Name
-- Address
-- Account Number 
-- Balance
-
-#### Deposit:
-- Input amount
-- Change the amount in database
-- Show account details.
-
-#### Withdraw:
-- Input amount
-- Change the amount in database
-- Show account details.
+The bank interface starts with 3 options:       
+- Exit.
+- Login.
+- Create new customer account.
 
 
-## EMPLOYEE
+![image](https://user-images.githubusercontent.com/17706548/201120693-8a3385b0-48b9-4d71-9c95-8a98dfd64557.png)
 
-If the logged in user is a employee then the user gets the following options.
+### 0. Exit: 
+The bank_main is an infinite loop that exits when the user chooses 0.
 
+### 1. Login:
+Login as employee or customer.
+Login successfull if user_id and password matches.
 
-### Operation Details:
+***The following use cases have been addressed as of now:***
+- Trying to login as a customer before any customer accounts are created.     
+![image](https://user-images.githubusercontent.com/17706548/201121237-2b6022c5-27c4-4394-b67a-7f480d6c5008.png)
 
-- Open an account
-- Show account details
-- Search 
-- Exit
+- Trying to login with wrong credentials.     
+![image](https://user-images.githubusercontent.com/17706548/201121322-8a49d947-e7e9-4e8e-a016-a54571049b08.png)
 
+- Successful login.     
+![image](https://user-images.githubusercontent.com/17706548/201121387-2cc57066-5e03-4e40-8091-f09546c8a8af.png)
 
-#### Open an account
-
-Input New User / Existing user.
-
-New User:
-- Input user name, address 
-- Default safe password is created.
-- Create unique Account Number
-- Create unique User Id 
-- Input initial amount
-- Save Account into database
-- Output Account Number, User Id, password created
+### 2. Create new customer account    
+- Inputs user details and creates an account.    
+- Customer_id is generated incrementally. (5000001 onwards.)    
+![image](https://user-images.githubusercontent.com/17706548/201122509-cbe59552-29a5-4a72-8fec-0d4109c80bd1.png)
 
 
-Existing User:
-- Input user id
-- Read user name from database
-- Create unique Account Number
-- Input initial amount
-- Save Account into database
-- Output Account Number, User Id
+- This new customer can login from the next loop.     
+![image](https://user-images.githubusercontent.com/17706548/201122574-c8d8c1c1-01f8-49cb-ae61-cfde700e423c.png)
 
-#### Show Account Details:
-Same
-
-### Search
-- Search by user id / Name and Address.
-- Search by account number
-
-Userid:
-- Show User name, address
-- Retrieve all accounts for user
-- Input which account to show.
-- Show Account Details
-
-User Name and Address:
-- Show list of found users (Username, user id)
-- Input which user to show
-- Show User name, address
-- Retrieve all accounts for user
-- Input which account to show.
-- Show Account Details
-
-Account Number:
-- Input which account to show.
-- Show Account Details
+### Post Login:
+- No post login features have been implemented in this current project.
+- This is supposed to be a simple C++ multi-file project.
+- I am moving onto more complex projects.
